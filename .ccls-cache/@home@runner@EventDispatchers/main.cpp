@@ -1,5 +1,11 @@
+#pragma once
+#include "EventDispatcher.h"
 #include <iostream>
+#include "Character.h"
+
+
 
 int main() {
-  std::cout << "Hello World!\n";
+Character Jeff;
+	Jeff.BroadcastEvent()
 }
