@@ -7,15 +7,16 @@ using std::string;
 class Event
 {
 private:
-EVENTID EventID;
+
 void* Parameter;
 public:
+EVENTID EventID;
 Event(EVENTID EventID,void* Parameter = 0)
 {
 	this->EventID = EventID;
 	this->Parameter = Parameter;
 }
-~Event();
+~Event() = default;
 
 inline EVENTID GetEventID() const {return EventID;}
 
