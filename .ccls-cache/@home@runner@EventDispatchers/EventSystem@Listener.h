@@ -5,8 +5,8 @@
 class Listener
 {
 public:
-Listener();
-virtual ~Listener();
+Listener(){};
+virtual ~Listener() = default;
 virtual void HandleEvent(Event* event) = 0;
 };
 #endif

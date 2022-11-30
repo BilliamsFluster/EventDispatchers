@@ -1,9 +1,17 @@
 #pragma once
 #include <iostream>
-#include "EventDispatcher.h"
-class Character
+#include "EventSystem/Listener.h"
+#include "EventSystem/Event.h"
+class Character: public Listener
 {
-EventDispatcher<void>* EventHandler;
+public:
+std::string Name;
+Character(std::string Name)
+{
+	this->Name = Name;
+}
+
+void HandleEvent(Event* Event);
 
 void SayHello(){std::cout<<"Hello"<<std::endl;}
 };

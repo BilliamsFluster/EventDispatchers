@@ -24,7 +24,7 @@ void DispatchEvent(Event* Event);
 
 
 list<Event> CurrentEvents;
-	EventDispatcher();
+	EventDispatcher(){};
 ~EventDispatcher(){Shutdown();};
 EventDispatcher(const EventDispatcher& rhs);
 EventDispatcher& operator=(const EventDispatcher& rhs);
